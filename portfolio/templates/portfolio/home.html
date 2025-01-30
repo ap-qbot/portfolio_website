@@ -1,0 +1,27 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<div class="category-tabs">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link {% if active_category == 'all' %}active{% endif %}"
+               href="?category=all">All</a>
+        </li>
+        {% for category in categories %}
+        <li class="nav-item">
+            <a class="nav-link {% if active_category == category.slug %}active{% endif %}"
+               href="?category={{ category.slug }}">{{ category.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="portfolio-grid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for project in projects %}
+            {% include 'portfolio/cards/_card_switcher.html' %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% if project.category.slug == 'ai-ml' %}
+    {% include 'portfolio/cards/ai_ml_card.html' %}
+{% elif project.category.slug == 'web' %}
+    {% include 'portfolio/cards/web_card.html' %}
+{% elif project.category.slug == 'mobile' %}
+    {% include 'portfolio/cards/mobile_card.html' %}
+{% elif project.category.slug == 'erp' %}
+    {% include 'portfolio/cards/erp_card.html' %}
+{% elif project.category.slug == 'design' %}
+    {% include 'portfolio/cards/design_card.html' %}
+{% elif project.category.slug == 'logo-design' %}
+    {% include 'portfolio/cards/logo_card.html' %}
+{% endif %}

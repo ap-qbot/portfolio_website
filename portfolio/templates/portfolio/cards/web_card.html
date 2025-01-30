@@ -1,0 +1,17 @@
+<div class="col">
+    <div class="card card-regular">
+        <div class="image-link-wrapper">
+            <a href="{{ project.link }}" target="_blank" class="image-link">
+                <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                <div class="image-overlay">
+                    <span class="link-icon">→</span>
+                </div>
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ project.subtitle }}</h6>
+            <p class="card-text">{{ project.description }}</p>
+        </div>
+    </div>
+</div>

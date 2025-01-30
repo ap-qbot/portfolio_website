@@ -1,0 +1,24 @@
+<div class="col">
+    <div class="card card-regular">
+        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <div class="button-container">
+                {% if project.button_type %}
+                    {% if project.button_type == 'demo' %}
+                        <a href="{{ project.demo_link }}" target="_blank" class="btn btn-primary">Demo</a>
+                    {% elif project.button_type == 'video' and project.youtube_video_id %}
+                        <button type="button"
+                                class="btn btn-primary video-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                                data-video-id="{{ project.youtube_video_id }}">
+                            Video
+                        </button>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

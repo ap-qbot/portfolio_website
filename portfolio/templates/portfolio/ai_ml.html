@@ -1,0 +1,10 @@
+<div class="col">
+    <div class="card h-100">
+        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+/* static/css/styles.css - Add these styles */
+
+/* Base card styles */
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Regular cards (AI/ML, Web, Mobile, ERP) */
+.card-regular {
+    height: 450px; /* Fixed height for regular cards */
+}
+
+.card-regular .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-regular .card-body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px); /* Subtract image height */
+    padding: 1.5rem;
+}
+
+.card-regular .card-title {
+    margin-bottom: 1rem;
+}
+
+.card-regular .card-text {
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-box-orient: vertical;
+}
+
+.card-regular .card-footer {
+    background: none;
+    border-top: none;
+    padding: 1rem 1.5rem;
+    margin-top: auto;
+}
+
+/* Design category cards */
+.card-design {
+    height: 300px; /* Shorter height for design cards */
+}
+
+.card-design .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-design .card-body {
+    height: 50px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Design category cards */
+.card-logo {
+    height: 250px; /* Height for logo cards */
+}
+
+.card-logo .card-img-top {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button container */
+.button-container {
+    margin-top: auto;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Grid spacing */
+.portfolio-grid .row {
+    margin-bottom: 2rem;
+}
